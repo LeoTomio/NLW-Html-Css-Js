@@ -1,103 +1,103 @@
 const perguntas = [
     {
-        pergunta: "Qual personagem da série tem um medo irracional de animais empalhados?",
+        pergunta: "Qual é o operador usado para comparar se dois valores são iguais em valor e tipo em JavaScript?",
         respostas: [
-            "Ross",
-            "Chandler",
-            "Phoebe",
-            "Monica",
+            "==",
+            "===",
+            "=",
+            "!=",
         ],
-        correta: 0
+        correta: 1
     },
     {
-        pergunta: "Qual é o emprego de Chandler Bing?",
+        pergunta: "Qual palavra-chave é usada para declarar uma variável em JavaScript que não pode ser reatribuída?",
         respostas: [
-            "Publicitário",
-            "Advogado",
-            "Analista financeiro",
-            "Transponster",
+            "var",
+            "let",
+            "const",
+            "variable",
         ],
         correta: 2
     },
     {
-        pergunta: "Qual é o nome do café onde os amigos sempre se encontram?",
+        pergunta: "Qual método é usado para remover o último elemento de um array em JavaScript?",
         respostas: [
-            "Central Perk",
-            "Perk Central",
-            "Central Coffee",
-            "Perk Place",
+            "pop()",
+            "remove()",
+            "delete()",
+            "splice()",
         ],
         correta: 0
     },
     {
-        pergunta: "O que é o 'Unagi', de acordo com Ross?",
+        pergunta: "Qual é a função usada para converter uma string em um número em JavaScript?",
         respostas: [
-            "Uma arte marcial",
-            "Um estado de relaxamento",
-            "Um tipo de sushi",
-            "Um tipo de filosofia zen",
-        ],
-        correta: 1
-    },
-    {
-        pergunta: "Qual é o sobrenome do personagem Ross?",
-        respostas: [
-            "Green",
-            "Geller",
-            "Buffay",
-            "Bing",
-        ],
-        correta: 1
-    },
-    {
-        pergunta: "Qual é o emprego de Joey Tribbiani?",
-        respostas: [
-            "Ator",
-            "Médico",
-            "Professor",
-            "Chef",
-        ],
-        correta: 0
-    },
-    {
-        pergunta: "Qual é o nome da irmã gêmea de Phoebe?",
-        respostas: [
-            "Ursula",
-            "Rachel",
-            "Emily",
-            "Janice",
-        ],
-        correta: 0
-    },
-    {
-        pergunta: "O que Monica Geller faz para viver?",
-        respostas: [
-            "Chef",
-            "Advogada",
-            "Jornalista",
-            "Médica",
-        ],
-        correta: 0
-    },
-    {
-        pergunta: "Qual é o animal de estimação exótico de Ross?",
-        respostas: [
-            "Gato",
-            "Cachorro",
-            "Macaco",
-            "Pássaro",
+            "parseString()",
+            "toInt()",
+            "Number()",
+            "convertToInt()",
         ],
         correta: 2
     },
     {
-        pergunta: "Quem é o último a descobrir sobre o relacionamento de Chandler e Monica?",
+        pergunta: "O que o método 'forEach()' faz em JavaScript?",
         respostas: [
-            "Phoebe",
-            "Rachel",
-            "Ross",
-            "Joey",
+            "Executa uma função para cada elemento em um array.",
+            "Adiciona um elemento ao final de um array.",
+            "Remove um elemento específico de um array.",
+            "Filtra os elementos de um array com base em uma condição fornecida.",
         ],
-        correta: 1
+        correta: 0
+    },
+    {
+        pergunta: "Qual é o resultado da expressão '2' + 2 em JavaScript?",
+        respostas: [
+            "22",
+            "4",
+            "Erro",
+            "6",
+        ],
+        correta: 0
+    },
+    {
+        pergunta: "O que é o IIFE (Immediately Invoked Function Expression) em JavaScript?",
+        respostas: [
+            "Um padrão de design para criar funções em JavaScript.",
+            "Uma função que é invocada somente quando outra função é chamada.",
+            "Uma função que é definida e executada imediatamente após ser declarada.",
+            "Um tipo de função de seta em JavaScript.",
+        ],
+        correta: 2
+    },
+    {
+        pergunta: "Qual é o método usado para concatenar dois ou mais arrays em JavaScript?",
+        respostas: [
+            "concat()",
+            "join()",
+            "merge()",
+            "splice()",
+        ],
+        correta: 0
+    },
+    {
+        pergunta: "O que é o hoisting em JavaScript?",
+        respostas: [
+            "Um método de classificação de variáveis em JavaScript.",
+            "Um tipo de erro de sintaxe.",
+            "Um mecanismo em JavaScript que eleva declarações de variáveis e funções para o topo do escopo.",
+            "Uma função nativa em JavaScript.",
+        ],
+        correta: 2
+    },
+    {
+        pergunta: "Qual é a finalidade do método 'filter()' em JavaScript?",
+        respostas: [
+            "Iterar sobre os elementos de um array e executar uma função em cada elemento, retornando um novo array com os resultados.",
+            "Adicionar um novo elemento ao final de um array.",
+            "Remover um elemento específico de um array.",
+            "Filtrar os elementos de um array com base em uma condição fornecida.",
+        ],
+        correta: 3
     },
 ];
 
