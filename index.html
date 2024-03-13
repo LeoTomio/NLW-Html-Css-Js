@@ -5,28 +5,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Teste seus conhecimentos</title>
-    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-    <h1>Teste seus conhecimentos</h1>
+    <main>
+        <h1>Teste seus conhecimentos</h1>
 
-    <div id="quiz"></div>
-    <template>
-        <div class="quiz-item">
-            <h3>
-                Pergunta 01
-            </h3>
-            <dl>
-                <dt>
-                    <input type="radio" name="item" value="0">
-                    <span>Resposta A</span>
-                </dt>
-            </dl>
+        <div id="quiz"></div>
+        <template>
+            <div class="quiz-item">
+                <h3>
+                    Pergunta 01
+                </h3>
+                <dl>
+                    <dt>
+                        <input type="radio" name="item" value="0">
+                        <span>Resposta A</span>
+                    </dt>
+                </dl>
+            </div>
+        </template>
+
+        <div id="acertos">
+            <strong>Acertos</strong>
+            <span>0 de 10</span>
         </div>
-    </template>
 
-    <script src="index.js"></script> <!-- Importando o arquivo index.js -->
+        <script src="index.js"></script> <!-- Importando o arquivo index.js -->
 </body>
+</main>
 
 </html>

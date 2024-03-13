@@ -1,4 +1,38 @@
-body{
-    background-color: rgb(37, 52, 68);
-    color:white;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+*,
+:root {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing:antialised;
+    -moz-osx-smoothing:grayscale;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    border: 1px solid red;
+    background-color: rgb(63, 58, 58);
+    color: #daa520
+}
+
+main {
+    padding: 20px;
+    margin: 0 auto 64px;
+    max-width: 640px;
+}
+
+
+
+#acertos {
+    text-align: center;
+    background-color: #A3E635;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 12px;
+    font-size: 20px;
+    color: black
 }

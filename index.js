@@ -93,7 +93,11 @@ const perguntas = [
 
 const quiz = document.querySelector('#quiz')
 const template = document.querySelector('template')
+const corretas = new Set()
+const totalDePerguntas = perguntas.length
 
+const mostrarTotal = document.querySelector('#acertos span')
+mostrarTotal.textContent = `${corretas.size} de ${totalDePerguntas}`
 
 //Loop pra cada pergunta
 for (const item of perguntas) {
@@ -109,10 +113,25 @@ for (const item of perguntas) {
         //cada uma das respostas da pergunta.
         const dt = quizItem.querySelector("dl dt").cloneNode(true)
         dt.querySelector('span').textContent = resposta
+        dt.querySelector('input').setAttribute('name', 'pergunta-' + perguntas.indexOf(item))
+        dt.querySelector('input').value = item.respostas.indexOf(resposta)
+        dt.querySelector('input').onchange = (event) => {
+            const estaCorreta = event.target.value == item.correta
+            corretas.delete(item)
+            if (estaCorreta) {
+                corretas.add(item)
+            }
+            mostrarTotal.textContent = `${corretas.size} de ${totalDePerguntas}`
+        }
+
+
+
         quizItem.querySelector('dl').appendChild(dt)
     }
+
     //remove a 1ª pergunta, a que ja esta no html.
     quizItem.querySelector('dl dt').remove()
+
 
 
     //Coloca a pergunta na tela.
