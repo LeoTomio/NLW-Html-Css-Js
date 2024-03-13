@@ -126,7 +126,13 @@ for (const item of perguntas) {
         dt.querySelector('span').textContent = resposta
         dt.querySelector('input').setAttribute('name', 'pergunta-' + perguntas.indexOf(item))
         dt.querySelector('input').value = item.respostas.indexOf(resposta)
-        dt.querySelector('input').onchange = (event) => { 
+        dt.querySelector('input').onchange = (event) => {
+
+            let question = document.getElementsByName(`pergunta-${perguntas.indexOf(item)}`)
+            for (let i = 0; i < question.length; i++) {
+                question[i].setAttribute('disabled', true)
+
+            }
             const estaCorreta = event.target.value == item.correta
             corretas.delete(item)
             if (estaCorreta) {
@@ -134,17 +140,11 @@ for (const item of perguntas) {
             }
             mostrarTotal.textContent = `${corretas.size} de ${totalDePerguntas}`
         }
-
-
-
         quizItem.querySelector('dl').appendChild(dt)
     }
-
+    
     //remove a 1ª pergunta, a que ja esta no html.
     quizItem.querySelector('dl dt').remove()
-
-
-
     //Coloca a pergunta na tela.
     quiz.appendChild(quizItem)
 }
