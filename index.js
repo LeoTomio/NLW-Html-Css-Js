@@ -1,95 +1,106 @@
 const perguntas = [
     {
-        pergunta: "Qual é a palavra-chave utilizada para declarar uma variável em JavaScript?",
+        pergunta: "Qual personagem da série tem um medo irracional de animais empalhados?",
         respostas: [
-            "var",
-            "let",
-            "const",
+            "Ross",
+            "Chandler",
+            "Phoebe",
+            "Monica",
+        ],
+        correta: 0
+    },
+    {
+        pergunta: "Qual é o emprego de Chandler Bing?",
+        respostas: [
+            "Publicitário",
+            "Advogado",
+            "Analista financeiro",
+            "Transponster",
         ],
         correta: 2
     },
     {
-        pergunta: "Qual método é usado para adicionar um elemento ao final de um array em JavaScript?",
+        pergunta: "Qual é o nome do café onde os amigos sempre se encontram?",
         respostas: [
-            "push()",
-            "pop()",
-            "shift()",
+            "Central Perk",
+            "Perk Central",
+            "Central Coffee",
+            "Perk Place",
         ],
         correta: 0
     },
     {
-        pergunta: "Qual símbolo é usado para comentários de uma linha em JavaScript?",
+        pergunta: "O que é o 'Unagi', de acordo com Ross?",
         respostas: [
-            "//",
-            "/*",
-            "<!--",
+            "Uma arte marcial",
+            "Um estado de relaxamento",
+            "Um tipo de sushi",
+            "Um tipo de filosofia zen",
+        ],
+        correta: 1
+    },
+    {
+        pergunta: "Qual é o sobrenome do personagem Ross?",
+        respostas: [
+            "Green",
+            "Geller",
+            "Buffay",
+            "Bing",
+        ],
+        correta: 1
+    },
+    {
+        pergunta: "Qual é o emprego de Joey Tribbiani?",
+        respostas: [
+            "Ator",
+            "Médico",
+            "Professor",
+            "Chef",
         ],
         correta: 0
     },
     {
-        pergunta: "Qual é o operador lógico 'E' em JavaScript?",
+        pergunta: "Qual é o nome da irmã gêmea de Phoebe?",
         respostas: [
-            "&&",
-            "||",
-            "!",
+            "Ursula",
+            "Rachel",
+            "Emily",
+            "Janice",
         ],
         correta: 0
     },
     {
-        pergunta: "Qual método é usado para converter uma string em um número inteiro em JavaScript?",
+        pergunta: "O que Monica Geller faz para viver?",
         respostas: [
-            "parseInt()",
-            "parseFloat()",
-            "toFixed()",
+            "Chef",
+            "Advogada",
+            "Jornalista",
+            "Médica",
         ],
         correta: 0
     },
     {
-        pergunta: "Qual é a estrutura de controle de fluxo usada para executar um bloco de código se uma condição for verdadeira?",
+        pergunta: "Qual é o animal de estimação exótico de Ross?",
         respostas: [
-            "if...else",
-            "for",
-            "switch",
-        ],
-        correta: 0
-    },
-    {
-        pergunta: "Qual método é usado para remover o último elemento de um array em JavaScript?",
-        respostas: [
-            "pop()",
-            "push()",
-            "shift()",
-        ],
-        correta: 0
-    },
-    {
-        pergunta: "Qual é o resultado da expressão '5' + 2 em JavaScript?",
-        respostas: [
-            "52",
-            "7",
-            "Error",
-        ],
-        correta: 0
-    },
-    {
-        pergunta: "Qual método é usado para juntar os elementos de um array em uma string em JavaScript?",
-        respostas: [
-            "join()",
-            "concat()",
-            "splice()",
-        ],
-        correta: 0
-    },
-    {
-        pergunta: "Qual função é usada para imprimir algo no console em JavaScript?",
-        respostas: [
-            "console.print()",
-            "print()",
-            "console.log()",
+            "Gato",
+            "Cachorro",
+            "Macaco",
+            "Pássaro",
         ],
         correta: 2
-    }
+    },
+    {
+        pergunta: "Quem é o último a descobrir sobre o relacionamento de Chandler e Monica?",
+        respostas: [
+            "Phoebe",
+            "Rachel",
+            "Ross",
+            "Joey",
+        ],
+        correta: 1
+    },
 ];
+
 
 const quiz = document.querySelector('#quiz')
 const template = document.querySelector('template')
@@ -115,7 +126,7 @@ for (const item of perguntas) {
         dt.querySelector('span').textContent = resposta
         dt.querySelector('input').setAttribute('name', 'pergunta-' + perguntas.indexOf(item))
         dt.querySelector('input').value = item.respostas.indexOf(resposta)
-        dt.querySelector('input').onchange = (event) => {
+        dt.querySelector('input').onchange = (event) => { 
             const estaCorreta = event.target.value == item.correta
             corretas.delete(item)
             if (estaCorreta) {
