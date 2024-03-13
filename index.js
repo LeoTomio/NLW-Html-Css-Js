@@ -132,17 +132,22 @@ for (const item of perguntas) {
             for (let i = 0; i < question.length; i++) {
                 question[i].setAttribute('disabled', true)
 
-            }
+            } 
+            const span = dt.querySelector("span")
             const estaCorreta = event.target.value == item.correta
             corretas.delete(item)
+            span.style.borderRadius = '4px'
             if (estaCorreta) {
+                span.style.backgroundColor = 'green'
                 corretas.add(item)
+            } else{                
+                span.style.backgroundColor = 'red'
             }
             mostrarTotal.textContent = `${corretas.size} de ${totalDePerguntas}`
         }
         quizItem.querySelector('dl').appendChild(dt)
     }
-    
+
     //remove a 1ª pergunta, a que ja esta no html.
     quizItem.querySelector('dl dt').remove()
     //Coloca a pergunta na tela.
