@@ -23,7 +23,7 @@ main {
 }
 
 header {
-    margin-top: 16px;
+    margin-top:5rem;
     padding-bottom: 24px;
     border-bottom: 1px solid #334155;
 }
@@ -120,7 +120,7 @@ input:hover{
     text-align: center;
     background-color: #A3E635;
     position: fixed;
-    bottom: 0;
+    top: 0;
     left: 0;
     width: 100%;
     padding: 12px;
